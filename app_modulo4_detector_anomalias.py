@@ -27,7 +27,7 @@ tab1, tab2, tab3 = st.tabs(
 # Generamos también un dato de "es fin de semana" (booleano) por cada lectura,
 # simulando por ejemplo el día de la semana en que se tomó la lectura.
 def generar_datos_con_dia(n):
-    temperaturas, humedades = generar_datos(n)
+    temperaturas, humedades, finde = generar_datos(n)
     # 0=lunes ... 6=domingo -> fin de semana si es 5 o 6
     dias = np.random.randint(0, 7, n)
     es_fin_de_semana = (dias == 5) | (dias == 6)
